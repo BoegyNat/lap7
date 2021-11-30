@@ -30,12 +30,21 @@ string func3(string x){
 		y += tolower(x[i]);
 		i++;
 	}
-	return y;	
+	string Ans;
+	if(y == func1(y)){
+		Ans = "Yes";
+	}
+	else{
+		Ans = "No";
+	}
+	return Ans;	
 }
 
 int main(){
-    cout >> "Input text: "
-    cout >> "Reversed text: "
-    cout >> "Palindrome: "
+	string x;
+    cout << "Input text: ";
+	cin >> x;
+    cout << "Reversed text: " << func1(x) << endl;
+    cout << "Palindrome: " << func3(x);
     return 0;
 }
